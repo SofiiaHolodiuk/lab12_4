@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Використання операторів циклів</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(120deg, #f3e5f5, #e1bee7);
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Демонстрація циклів</h1>
+        <script>
+            "use strict";
+
+            let n = parseInt(prompt("Введіть натуральне число n для обчислення суми від 1 до n:"));
+            if (n < 1) {
+                document.write("Будь ласка, введіть натуральне число (більше або дорівнює 1).");
+            } else {
+                // Використання циклу FOR
+                let sumFor = 0;
+                for (let i = 1; i <= n; i++) {
+                    sumFor += i;
+                }
+                document.write("<p>Сума чисел від 1 до " + n + " (циклом <b>FOR</b>) дорівнює: " + sumFor + "</p>");
+
+                // Використання циклу WHILE
+                let sumWhile = 0;
+                let j = 1;
+                while (j <= n) {
+                    sumWhile += j;
+                    j++;
+                }
+                document.write("<p>Сума чисел від 1 до " + n + " (циклом <b>WHILE</b>) дорівнює: " + sumWhile + "</p>");
+
+                // Використання циклу DO WHILE
+                let sumDoWhile = 0;
+                let k = 1;
+                do {
+                    sumDoWhile += k;
+                    k++;
+                } while (k <= n);
+                document.write("<p>Сума чисел від 1 до " + n + " (циклом <b>DO WHILE</b>) дорівнює: " + sumDoWhile + "</p>");
+            }
+        </script>
+    </div>
+</body>
+</html>
